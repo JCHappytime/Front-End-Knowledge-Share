@@ -43,6 +43,12 @@ undefined 在 js 中不是一个保留字，这意味着我们可以使用 undef
 
 #### 3. Javascript有几种类型的值,内存图长啥样
 
+```
+知识点：<br>
+- 栈：原始数据类型（Undefined, Null, Boolean, Number, String）
+- 堆：引用数据类型（Object, Array，Function）
+```
+
 ## CSS
 | 题目         | 大概内容                    |
 | ------------ | -------------------------- |
