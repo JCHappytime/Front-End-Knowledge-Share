@@ -45,8 +45,10 @@ undefined 在 js 中不是一个保留字，这意味着我们可以使用 undef
 
 ```
 知识点：<br>
-- 栈：原始数据类型（Undefined, Null, Boolean, Number, String）
+- 栈：简单数据类型（Undefined, Null, Boolean, Number, String）
 - 堆：引用数据类型（Object, Array，Function）
+以上两种类型的区别是：存储位置不同。
+简单数据类型直接存储在栈（stack）中的简单数据段，占据空间小，大小固定且是频繁使用的数据。
 ```
 
 ## CSS
