@@ -10,7 +10,7 @@
 ### 目录
 - [1. js基本数据类型介绍](#1-js基本数据类型介绍)
 - [2. undefined和null有什么区别](#2-undefined和null有什么区别)
-- [3. Javascript有几种类型的值，内存图长啥样？](#3-Javascript有几种类型的值-，内存图长啥样-？)
+- [3. Javascript 有几种类型的值，内存图长啥样？](#3-Javascript-有几种类型的值-内存图长啥样-)
 
 
 
