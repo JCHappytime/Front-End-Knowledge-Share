@@ -10,7 +10,7 @@
 ### 目录
 - [1. js基本数据类型介绍](#1-js基本数据类型介绍)
 - [2. undefined和null有什么区别](#2-undefined和null有什么区别)
-- [3. Javascript有几种类型的值内存图长啥样](#3-Javascript有几种类型的值内存图长啥样)
+- [3. Javascript有几种类型的值，内存图长啥样？](#3-Javascript有几种类型的值-，内存图长啥样-？)
 
 
 
@@ -41,7 +41,7 @@ undefined 在 js 中不是一个保留字，这意味着我们可以使用 undef
 号对两种类型的值进行比较时会返回 true，使用三个等号时会返回 false。
 ```
 
-#### 3. Javascript有几种类型的值内存图长啥样
+#### 3. Javascript有几种类型的值，内存图长啥样？
 
 ```
 知识点：
