@@ -11,6 +11,7 @@
 - [1. js基本数据类型介绍](#1-js基本数据类型介绍)
 - [2. undefined和null有什么区别](#2-undefined和null有什么区别)
 - [3. Javascript 有几种类型的值，内存图长啥样？](#3-Javascript-有几种类型的值内存图长啥样)
+- [4. 内部属性[[Class]]是什么？](#4-内部属性Class是什么)
 
 
 
@@ -45,7 +46,7 @@ undefined 在 js 中不是一个保留字，这意味着我们可以使用 undef
 
 ```
 知识点：
-- 栈：基本数据类型（Undefined, Null, Boolean, Number, String）
+- 栈：基本数据类型（Undefined, Null, Boolean, Number, String, Symbol, BigInt）
 - 堆：引用数据类型（Object, Array，Function）
 以上两种类型的区别是：存储位置不同。
 - 基本数据类型直接存储在栈（Stack）中的简单数据段，占据空间小，大小固定且是频繁使用的数据。
@@ -62,6 +63,33 @@ js可以分为两种类型的值，一种是基本数据类型，一种复杂数
 *** 两种类型的主要区别是它们的存储位置不同，基本数据类型的值直接保存在栈中，复杂数据类型的值保存在堆中，通过使用在栈
     中保存对应的指针来获取堆中的值。
 ```
+#### 4. 内部属性[[Class]]是什么？
+
+```
+所有typeof返回值为Object的对象都包含一个内部属性。这个属性无法直接访问，一般通过Object.prototype.toString(..)
+来查看。如：
+Object.prototype.toString.call(['a', 'b', 'c'])
+=>"[object Array]"
+
+Object.prototype.toString.call(/regex-literal/i/);
+=>"[object RegExp]"
+
+但是我们自己创建的类就不会有这样的待遇，因为toString()找不到toStringTag属性，只能返回默认的Object标签。
+默认情况下，类的[[Class]]返回[object Object]，如：
+class Person {}
+Object.prototype.toString.call(new Person());
+=>"[object Object]"
+**这个时候需要定制我们自己的[[Class]]
+class Person1 {
+  get [Symbol.toStringTag]() {
+    return 'Person1';
+  }
+ }
+ Object.prototype.toString.call(new Person1());
+ => "[object Person1]"
+```
+
+
 
 ## CSS
 | 题目         | 大概内容                    |
