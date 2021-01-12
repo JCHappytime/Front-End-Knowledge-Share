@@ -90,7 +90,7 @@ class Person1 {
  Object.prototype.toString.call(new Person1());
  => "[object Person1]"
 ```
-#### 介绍一下Proxy是什么？
+#### 5. 介绍一下Proxy是什么？
 ```
 - Proxy用于修改某些操作的默认行为，相当于在语言层面做出修改，即对编程语言进行编程。
 - Proxy可以认为是：在目标对象之前假设一层拦截，外界对该对象的访问，都必须首先通过这层拦截，因此提供了一种机制，
