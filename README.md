@@ -13,6 +13,7 @@
 - [2. undefined和null有什么区别](#2-undefined和null有什么区别)
 - [3. Javascript 有几种类型的值，内存图长啥样？](#3-Javascript-有几种类型的值内存图长啥样)
 - [4. 内部属性[[Class]]是什么？](#4-内部属性Class是什么)
+- [5. 介绍一下Proxy是什么？](#5-介绍一下Proxy是什么)
 
 
 
@@ -88,6 +89,13 @@ class Person1 {
  }
  Object.prototype.toString.call(new Person1());
  => "[object Person1]"
+```
+#### 介绍一下Proxy是什么？
+```
+- Proxy用于修改某些操作的默认行为，相当于在语言层面做出修改，即对编程语言进行编程。
+- Proxy可以认为是：在目标对象之前假设一层拦截，外界对该对象的访问，都必须首先通过这层拦截，因此提供了一种机制，
+  可以对外界的访问进行过滤和改写。
+  Proxy意思是代理，在这里表示由它来“代理”某些操作，可以译为代理器。
 ```
 
 
