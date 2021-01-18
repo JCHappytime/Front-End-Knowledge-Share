@@ -175,12 +175,16 @@ result[5](); // 9
   xArray = window.frames[0].Array;
   vararr = newxArray(1,2,3); // [1,2,3]
   arr instanceof Array; // false
-  
-  
-  
-（3）Object.prototype.toString.call()
-
+  针对数组的这个问题，ES5 提供了 Array.isArray() 方法 。该方法用以确认某个对象本身是否为 Array 类型，而不区分该对象在哪个环境中创建。
+  Array.isArray() 本质上检测的是对象的内部属性 [[Class]] 值，里面包含了对象的类型信息，其格式为 [object Xxx]，Xxx 就是对应的具体类
+  型。对于数组而言，[[Class]] 的值就是 [object Array] 。
 （4）constructor
+  当一个函数 F被定义时，JS引擎会为F添加 prototype 原型，然后再在 prototype上添加一个 constructor 属性，并让其指向 F 的引用。如下所示：
+
+（3）Object.prototype.toString.call()
+  
+
+
 ```
 
 
