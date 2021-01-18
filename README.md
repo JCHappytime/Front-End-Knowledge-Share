@@ -143,7 +143,16 @@ result[5](); // 9
   其中，null 有属于自己的数据类型 Null ， 引用类型中的 数组、日期、正则 也都有属于自己的具体类型，而 typeof 对于这些类型的
   处理，只返回了处于其原型链最顶端的 Object 类型，没有错，但这不是我们想要的最终结果。
 （2）instanceof
-
+  instanceof 是用来判断 A 是否为 B 的实例，表达式为：A instanceof B，如果 A 是 B 的实例，则返回 true,否则返回 false。 在
+  这里需要特别注意的是：instanceof 检测的是原型。
+  instanceof (A, B) {
+    let a = A.__proto__;
+    let b = B.prototype;
+    if (a === b) {  // A的内部属性 __proto__ 指向 B 的原型对象
+    return true;
+    }
+  return false;
+  }
 （3）Object.prototype.toString.call()
 
 （4）constructor
