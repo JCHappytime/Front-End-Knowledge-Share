@@ -133,7 +133,15 @@ result[5](); // 9
 ```
 一共有4种方法：
 （1）typeof
-
+  typeof是一个操作符而不是函数，右侧跟一个一元表达式，并返回这个表达式的数据类型。返回的结果用该类型的字符串(全小写字母)形
+  式表示，包括以下 7 种：number、boolean、symbol、string、object、undefined、function 等。有些时候，typeof 操作符会返
+  回一些令人迷惑但技术上却正确的值：
+  - 对于基本类型，除 null 以外，均可以返回正确的结果。
+  - 对于引用类型，除 function 以外，一律返回 object 类型。
+  - 对于 null ，返回 object 类型。
+  - 对于 function 返回  function 类型。
+  其中，null 有属于自己的数据类型 Null ， 引用类型中的 数组、日期、正则 也都有属于自己的具体类型，而 typeof 对于这些类型的
+  处理，只返回了处于其原型链最顶端的 Object 类型，没有错，但这不是我们想要的最终结果。
 （2）instanceof
 
 （3）Object.prototype.toString.call()
