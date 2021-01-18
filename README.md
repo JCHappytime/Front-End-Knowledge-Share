@@ -153,6 +153,31 @@ result[5](); // 9
     }
   return false;
   }
+  例子：
+  [] instanceof Array; // true
+  [] instanceof Object; // true
+  newDate() instanceof Date;// true
+  newDate() instanceof Object;// true
+  虽然 instanceof 能够判断出 [ ] 是Array的实例，但它认为 [ ] 也是Object的实例，为什么呢？
+  
+  从 instanceof 能够判断出 [ ].__proto__  指向 Array.prototype，而 Array.prototype.__proto__ 又指向了Object.prototype，
+  最终 Object.prototype.__proto__ 指向了null，标志着原型链的结束。因此，[]、Array、Object 就在内部形成了一条原型链：
+  从原型链可以得出结论，[] 的 __proto__  直接指向Array.prototype，间接指向 Object.prototype，所以按照 instanceof 的判断规则，[]
+  就是Object的实例。依次类推，类似的 new Date()也会形成一条对应的原型链 。因此，instanceof 只能用来判断两个对象是否属于实例关系， 
+  而不能判断一个对象实例具体属于哪种类型。
+  **问题**
+  instanceof 操作符的问题在于，它假定只有一个全局执行环境。如果网页中包含多个框架，那实际上就存在两个以上不同的全局执行环境，从而存
+  在两个以上不同版本的构造函数。如果你从一个框架向另一个框架传入一个数组，那么传入的数组与在第二个框架中原生创建的数组分别具有各自不
+  同的构造函数。
+  
+  variframe = document.createElement('iframe');
+  document.body.appendChild(iframe);
+  xArray = window.frames[0].Array;
+  vararr = newxArray(1,2,3); // [1,2,3]
+  arr instanceof Array; // false
+  
+  
+  
 （3）Object.prototype.toString.call()
 
 （4）constructor
