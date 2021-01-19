@@ -191,6 +191,9 @@ result[5](); // 9
   <br>当我们执行let f = new Func()时，Func被当成了构造函数，f是Func的实例对象，此时Func原型上的constructor传递到了f上，因此f.constructor === Func.
   
   ![捕获](https://user-images.githubusercontent.com/10249805/104984691-3187df80-5a4a-11eb-948a-d57bed6a4c9e.PNG)
+  
+  <br>可以看出的是：Func利用对象上的constructor引用了自身，当Func作为构造函数来创建对象时，原型上的constructor就被遗传到新创建的对象上了，从原型链角
+  度来讲，构造函数Func就是新对象的类型。这样做的意义是，让新对象在诞生以后，就具有可追溯的数据类型。
 
 （4）Object.prototype.toString.call()
   
