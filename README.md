@@ -130,9 +130,10 @@ result[5](); // 9
 首先将全局执行上下文压入执行上下文栈中，然后按顺序依次执行代码。
 ```
 #### 7. js类型判断有哪些方式？
-```
+
 一共有4种方法：
 （1）typeof
+```
   typeof是一个操作符而不是函数，右侧跟一个一元表达式，并返回这个表达式的数据类型。返回的结果用该类型的字符串(全小写字母)形
   式表示，包括以下 7 种：number、boolean、symbol、string、object、undefined、function 等。有些时候，typeof 操作符会返
   回一些令人迷惑但技术上却正确的值：
@@ -142,7 +143,9 @@ result[5](); // 9
   - 对于 function 返回  function 类型。
   其中，null 有属于自己的数据类型 Null ， 引用类型中的 数组、日期、正则 也都有属于自己的具体类型，而 typeof 对于这些类型的
   处理，只返回了处于其原型链最顶端的 Object 类型，没有错，但这不是我们想要的最终结果。
-（2）instanceof
+  ```
+  （2）instanceof
+  ```
   instanceof 是用来判断 A 是否为 B 的实例，表达式为：A instanceof B，如果 A 是 B 的实例，则返回 true,否则返回 false。 在
   这里需要特别注意的是：instanceof 检测的是原型。
   instanceof (A, B) {
@@ -178,15 +181,14 @@ result[5](); // 9
   针对数组的这个问题，ES5 提供了 Array.isArray() 方法 。该方法用以确认某个对象本身是否为 Array 类型，而不区分该对象在哪个环境中创建。
   Array.isArray() 本质上检测的是对象的内部属性 [[Class]] 值，里面包含了对象的类型信息，其格式为 [object Xxx]，Xxx 就是对应的具体类
   型。对于数组而言，[[Class]] 的值就是 [object Array] 。
-（4）constructor
-  当一个函数 F被定义时，JS引擎会为F添加 prototype 原型，然后再在 prototype上添加一个 constructor 属性，并让其指向 F 的引用。如下所示：
+  ```
+（3）constructor
 
-（3）Object.prototype.toString.call()
+  当一个函数Func被定义时，JS引擎会为Func添加 prototype 原型，然后再在 prototype 上添加一个 constructor 属性，并让其指向 Func 的引用。如下所示：
   
 
-
-```
-
+（4）Object.prototype.toString.call()
+  
 
 ## CSS
 | 题目         | 大概内容                    |
