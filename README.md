@@ -189,7 +189,7 @@ result[5](); // 9
   ![捕获](https://user-images.githubusercontent.com/10249805/104984352-82e39f00-5a49-11eb-9fc0-252aa5105a4d.PNG)
   当我们执行let f = new Func()时，Func被当成了构造函数，f是Func的实例对象，此时Func原型上的constructor传递到了f上，因此f.constructor === Func.
   
-  ![捕获](https://media.oss.navercorp.com/user/19656/files/1917c500-5a4a-11eb-8086-5fac605bddb6)
+  ![捕获](https://user-images.githubusercontent.com/10249805/104984691-3187df80-5a4a-11eb-948a-d57bed6a4c9e.PNG)
 
 （4）Object.prototype.toString.call()
   
