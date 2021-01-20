@@ -194,6 +194,12 @@ result[5](); // 9
   
   <br>可以看出的是：Func利用对象上的constructor引用了自身，当Func作为构造函数来创建对象时，原型上的constructor就被遗传到新创建的对象上了，从原型链角
   度来讲，构造函数Func就是新对象的类型。这样做的意义是，让新对象在诞生以后，就具有可追溯的数据类型。
+  
+  **注意：**
+  
+  - null 和 undefined 是无效的对象，因此是不会有 constructor 存在的，这两种类型的数据需要通过其他方式来判断。
+
+  - 函数的 constructor 是不稳定的，这个主要体现在自定义对象上，当开发者重写 prototype 后，原有的 constructor 引用会丢失，constructor 会默认为 Object
 
 （4）Object.prototype.toString.call()
   
