@@ -254,7 +254,9 @@ export default {
 }
 这里构造的反应性数据就可以被template使用，可以通过state.username和state.password获得数据的值。
 
-3.
+3. 对比二者的methods写法
+  - Vue2.0 直接将方法包含在methods属性中就可以使用了。
+  - Vue3.0 需要在setup中定义并返回。
 
 4.
 
