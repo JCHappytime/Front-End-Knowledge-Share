@@ -256,7 +256,26 @@ export default {
 
 3. 对比二者的methods写法
   - Vue2.0 直接将方法包含在methods属性中就可以使用了。
-  - Vue3.0 需要在setup中定义并返回。
+  - Vue3.0 需要在setup中定义并返回，如下所示：
+  export default {
+  props: {
+    title: String
+  },
+  setup () {
+    const state = reactive({
+      username: '',
+      password: ''
+    })
+
+    const login = () => {
+      // 登陆方法
+    }
+    return { 
+      login,
+      state
+    }
+  }
+}
 
 4.
 
