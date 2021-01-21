@@ -277,7 +277,47 @@ export default {
   }
 }
 
-4.
+4. 生命周期钩子 lifecycle hooks
+  - Vue2.0 我们可以直接在组件属性中调用Vue的生命周期的钩子，如mounted():
+  export default {
+  props: {
+    title: String
+  },
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  mounted () {
+    console.log('组件已挂载')
+  },
+  methods: {
+    login () {
+      // login method
+    }
+  }
+}
+- Vue 3.0 合成型API里面的setup()方法可以包含了基本所有东西。生命周期的钩子就是其中之一。
+  但是在 Vue3 生周期钩子不是全局可调用的了，需要另外从vue中引入。和刚刚引入reactive一样，生命周期的挂载钩子叫onMounted。
+  引入后我们就可以在setup()方法里面使用onMounted挂载的钩子了。
+  
+  import { reactive, onMounted } from 'vue'
+
+export default {
+  props: {
+    title: String
+  },
+  setup () {
+    // ..
+
+    onMounted(() => {
+      console.log('组件已挂载')
+    })
+
+    // ...
+  }
+}
 
 ```
 
