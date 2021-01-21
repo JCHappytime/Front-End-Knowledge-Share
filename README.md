@@ -219,7 +219,40 @@ result[5](); // 9
 ```
 1. Vue3.0的响应数据是包含在一个反应状态中的，因此当我们在HTML中取数据时应该这样{{ state.username }}而不是像以前一样{{ username }};
 
-2. 
+2. 建立数据data的方式不同。
+  - Vue2.0 把两个数据放入data属性中
+  export default {
+  props: {
+    title: String
+  },
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  }
+}
+- Vue3.0 在Vue3.0，我们就需要使用一个新的setup()方法，此方法在组件初始化构造的时候触发。为了可以让开发者对反应型数据有更多的控制，我们可
+以直接用到 Vue3 的反应API（reactivity API）。从以下三个步骤来建立反应性数据：
+（1）从vue引入reactive
+（2）使用reactive()方法来声名我们的数据为反应性数据
+（3）使用setup()方法来返回我们的反应性数据，从而我们的template可以获取这些反应性数据
+import { reactive } from 'vue'
+
+export default {
+  props: {
+    title: String
+  },
+  setup () {
+    const state = reactive({
+      username: '',
+      password: ''
+    })
+
+    return { state }
+  }
+}
+这里构造的反应性数据就可以被template使用，可以通过state.username和state.password获得数据的值。
 
 3.
 
