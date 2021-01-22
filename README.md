@@ -413,9 +413,53 @@ function a(a) {  //函数 } console.log(a)//10
 - 在函数中如果没有定义这个变量 就要在全局作用域中查找
 - 赋值的时候函数中没有这个变量根据作用域链也会将全局这个变量的值发生改变
 
-【本质理解】
+**【本质理解-总括】**
   JS中奇怪的一点是你可以在变量和函数声明之前使用它们。感觉上就像是变量声明和函数声明被提升了到了代码的顶部一样。
-  
+  ```
+  sayHi() // Hi there!
+
+  function sayHi() {
+    console.log('Hi there!')
+  }
+
+  name = 'John Doe'
+  console.log(name)   // John Doe 
+  var name
+  ```
+  然而JavaScript并不会移动你的代码，所以JavaScript中“变量提升”并不是真正意义上的“提升”。
+  JavaScript是单线程语言，所以执行肯定是按顺序执行。但是并不是逐行的分析和执行，而是一段一段地分析执行，会先进行编译阶段然后才是执行阶段。
+  在编译阶段阶段，代码真正执行前的几毫秒，会检测到所有的变量和函数声明，所有这些函数和变量声明都被添加到JavaScript数据结构内的内存中。所以
+  这些变量和函数能在它们真正被声明之前使用。
+**【本质理解-函数提升】**
+```
+  sayHi() // Hi there!
+
+  function sayHi() {
+      console.log('Hi there!')
+  }
+```
+因为函数声明在编译阶段会被添加到词法环境（Lexical Environment）中，当JavaScript引擎遇到sayHi()函数时，它会从词法环境中找到这个函数并执行它。
+**【本质理解-var变量提升】**
+```
+  console.log(name)   // 'undefined'
+  var name = 'John Doe'
+  console.log(name)   // John Doe
+```
+上面的代码实际上分为两个部分：
+- var name表示声明变量name
+- = 'John Doe'表示的是为变量name赋值为'John Doe'。
+```
+  var name    // 声明变量
+  name = 'John Doe' // 赋值操作
+```
+只有声明操作var name会被提升，而赋值这个操作并不会被提升，但是为什么变量name的值会是undefined呢?
+原因是当JavaScript在编译阶段会找到var关键字声明的变量会添加到词法环境中，并初始化一个值undefined，在之后执行代码到赋值语句时，会把值赋值到这个变量。
+
+
+
+
+
+
 
 
 ## CSS
