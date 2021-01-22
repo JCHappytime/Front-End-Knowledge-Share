@@ -362,11 +362,15 @@ export default {
   ```
   ![打印结果](https://user-images.githubusercontent.com/10249805/105433756-3096be00-5c95-11eb-88d4-2cbaa84c687e.png)
 
-
-  
   首先，函数不调用不执行，所以调用了fun函数，在fun函数中，有一个函数a，调用了函数a，打印了a，调用a会执行a函数，里面var了一个a赋值为10，
   所以在函数a中打印a出的结果为10，在fun函数中打印a的结果是函数a这个函数体。
   
+  2.当前没有向上一级查找变量，一直到全局作用域为止，如果还是没有会报错，xxx is not defined。
+  
+
+
+
+
 
 
 
