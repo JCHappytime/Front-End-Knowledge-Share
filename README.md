@@ -491,6 +491,7 @@ function shallowCopy(object) {
 
 那如何实现一个深拷贝呢？说起来也简单，我们在拷贝的时候判断一下属性值的类型，如果是对象，我们递归调用深拷贝函数不就好了~
 
+```
 function deepCopy(object) {
   if (!object || typeof object !== "object")  return;
     let newObject = Array.isArray(object) ? [] : {};
@@ -503,8 +504,9 @@ function deepCopy(object) {
   
   return newObject;
 }
-
-
+```
+**【思考：性能问题】**<br>
+  尽管使用深拷贝会完全克隆一个新对象，不会产生副作用，但是深拷贝使用了递归，性能会不如浅拷贝，在开发中，还是要根据实际情况选择。
 
 
 
