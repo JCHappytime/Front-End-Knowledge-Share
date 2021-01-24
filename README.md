@@ -458,6 +458,29 @@ function a(a) {  //函数 } console.log(a)//10
 而let和const声明的变量，是存放在一个暂时性死区（dead zone）中，不会进行undefined的初始化，所以就会导致提前访问该变量时出现typeError，看起来像没有
 变量提升一样。
 
+#### 12. js中的深浅拷贝实现？
+
+- 浅拷贝实现
+```
+function shallowCopy(object) {
+  // 只拷贝对象
+  if (!object || typeof object !== "object") {
+    return;
+  }
+  // 根据object的类型判断是新建一个数组还是对象
+  let newObject = Array.isArray(object) ? [] : {};
+  
+  // 遍历object，并且判断是object的属性才拷贝
+  for (let key in object) {
+    if (object.hasOwnProperty(key)) {
+      newObject[key] = object[key];
+    }
+  }
+  return newObject;
+}
+```
+
+- 深拷贝实现
 
 
 
