@@ -454,6 +454,8 @@ function a(a) {  //函数 } console.log(a)//10
 ```
 只有声明操作var name会被提升，而赋值这个操作并不会被提升，但是为什么变量name的值会是undefined呢?
 原因是当JavaScript在编译阶段会找到var关键字声明的变量会添加到词法环境中，并初始化一个值undefined，在之后执行代码到赋值语句时，会把值赋值到这个变量。
+而let和const声明的变量，是存放在一个暂时性死区（dead zone）中，不会进行undefined的初始化，所以就会导致提前访问该变量时出现typeError，看起来像没有
+变量提升一样。
 
 
 
