@@ -513,6 +513,7 @@ function deepCopy(object) {
 
   首先了解一下三者的作用以及他们之间的区别：[call, apply, bind的作用和区别](https://juejin.cn/post/6844903866358562824)
 - call函数实现
+
 **作用**<br>call和apply都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部this的指向。<br>
 **实现步骤**<br>
 1.判断调用对象是否为函数，即使我们是定义在函数原型上的，但是可能出现使用call等方式调用的情况。
@@ -550,6 +551,7 @@ Function.prototype.myCall = function(context) {
 }
 ```
 - apply函数实现
+
 **作用**<br>call和apply都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部this的指向。<br>
 **实现步骤**<br>
 1.判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。
@@ -588,6 +590,7 @@ Function.prototype.myApply = function(context) {
 }
 ```
 - bind函数实现
+
 **作用**<br>bind()方法会创建一个新函数，称为绑定函数，当调用这个绑定函数时，绑定函数会以创建它时传入bind()方法的第一个参数作为this，传入bind()方法的第二
 个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。<br>
 **实现步骤**<br>
