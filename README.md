@@ -513,6 +513,13 @@ function deepCopy(object) {
 
   首先了解一下三者的作用以及他们之间的区别：[call, apply, bind的作用和区别](https://juejin.cn/post/6844903866358562824)
 - call函数实现
+1.判断调用对象是否为函数，即使我们是定义在函数原型上的，但是可能出现使用call等方式调用的情况。
+2.判断传入上下文对象是否存在，如果不存在，则设置为window;
+3.处理传入的参数，截取第一个参数后的所有参数；
+4.将函数作为上下文对象的一个属性；
+5.使用上下文对象来调用这个方法，并保存返回结果；
+6.删除刚才新增的属性。
+7.返回结果。
 ```
 Function.prototype.myCall = function(context) {
   // 判断调用对象
@@ -541,6 +548,13 @@ Function.prototype.myCall = function(context) {
 }
 ```
 - apply函数实现
+1.判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。
+2.判断传入上下文对象是否存在，如果不存在，则设置为 window;
+3.将函数作为上下文对象的一个属性。
+4.判断参数值是否传入;
+5.使用上下文对象来调用这个方法，并保存返回结果;
+6.删除刚才新增的属性;
+7.返回结果。
 ```
 Function.prototype.myApply = function(context) {
   // 判断调用对象是否为函数
@@ -570,7 +584,29 @@ Function.prototype.myApply = function(context) {
 }
 ```
 - bind函数实现
+1.判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。
+2.保存当前函数的引用，获取其余传入参数值。
+3.创建一个函数返回
+4.函数内部使用 apply 来绑定函数调用，需要判断函数作为构造函数的情况，这个时候需要传入当前函数的 this 给 apply 调用，其余情况都传入指定的上下文对象。
 ```
+Function.prototype.myBind = function(context) {
+  // 判断调用对象是否为函数
+  if (typeof this !== "function") {
+    throw new TypeError("Error");
+  }
+
+  // 获取参数
+  var args = [...arguments].slice(1),
+    fn = this;
+
+  return function Fn() {
+    // 根据调用方式，传入不同绑定值
+    return fn.apply(
+      this instanceof Fn ? this : context,
+      args.concat(...arguments)
+    );
+  };
+};
 ```
 #### 14. Vue3相比Vue2新增了哪些功能？
 
