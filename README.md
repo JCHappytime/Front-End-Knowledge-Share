@@ -510,6 +510,8 @@ function deepCopy(object) {
   尽管使用深拷贝会完全克隆一个新对象，不会产生副作用，但是深拷贝使用了递归，性能会不如浅拷贝，在开发中，还是要根据实际情况选择。
   
 #### 13. 手写call, apply以及bind函数
+
+  首先了解一下三者的作用以及他们之间的区别：[call, apply, bind的作用和区别](https://juejin.cn/post/6844903866358562824)
 - call函数实现
 ```
 Function.prototype.myCall = function(context) {
