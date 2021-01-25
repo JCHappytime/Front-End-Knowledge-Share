@@ -615,6 +615,32 @@ Function.prototype.myBind = function(context) {
   };
 };
 ```
+三者之间的比较：
+```
+var obj = {
+    x: 81,
+};
+
+var foo = {
+    getX: function () {
+      return this.x;
+    }
+}
+
+console.log(foo.getX.bind(obj)());  //81
+console.log(foo.getX.call(obj));    //81
+console.log(foo.getX.apply(obj));   //81
+
+三个输出的都是81，但是注意看使用 bind() 方法的，他后面多了对括号。当你希望改变上下文环境之后并非立即执行，而是回调执行的时候，使用 bind() 方法。
+而 apply/call 则会立即执行函数。
+```
+**总结：**
+
+- 1.apply、call、bind三者都是用来改变函数的this的指向的；
+- 2.apply、call、bind三者第一个参数都是this要指向的调用对象，也就是想指定的上下文；
+- 3.apply、call、bind三者都可以利用后续参数传参；
+- 4.bind是返回对应函数，便于稍后调用；apply 、call则是立即调用。
+
 #### 14. Vue3相比Vue2新增了哪些功能？
 
 
