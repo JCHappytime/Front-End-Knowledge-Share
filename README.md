@@ -634,6 +634,37 @@ console.log(foo.getX.apply(obj));   //81
 三个输出的都是81，但是注意看使用 bind() 方法的，他后面多了对括号。当你希望改变上下文环境之后并非立即执行，而是回调执行的时候，使用 bind() 方法。
 而 apply/call 则会立即执行函数。
 ```
+
+```
+// 修改前
+var module= {
+  bind: function () {
+    $btn.on('click', function () {
+      console.log(this); //this指向当前执行上下文$btn
+      this.showMsg(); // 当前执行上下文$btn没有showMsg()方法，无法调用
+    });
+  },
+
+  showMsg: function () {
+    console.log('饿了么');
+  }
+};
+
+// 修改后
+var module= {
+  bind: function () {
+    const _this = this; //将this指向的当前执行上下文module保存为_this
+    $btn.on('click', function () {
+      console.log(this); //this指向当前执行上下文$btn
+      _this.showMsg(); // _this即module，可以调用showMsg()方法
+    });
+  },
+
+  showMsg: function () {
+    console.log('饿了么');
+  }
+};
+```
 **总结：**
 
 - 1.apply、call、bind三者都是用来改变函数的this的指向的；
