@@ -711,8 +711,9 @@ DOM型指的是攻击者构建了特殊的URL，用户打开网站后，js脚本
 #### 16. 什么是CSP？
 
 CSP指的是安全策略，它的本质是一个白名单，告诉浏览器哪些外部资源可以加载和执行。我们只需要配置规则，如何拦截由浏览器自己来实现。
+通常有2种方式来开启CSP，一种是设置HTTP首部中的Content-Security-Policy,一种是设置meta标签的方式<meta http-equiv="Content-Security-Policy">
 
-
+可以参考：[《内容安全策略（CSP）》](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP)
 
 
 
