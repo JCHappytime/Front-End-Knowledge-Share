@@ -89,6 +89,7 @@ Object.prototype.toString.call(/regex-literal/i/);
 =>"[object RegExp]"
 
 但是我们自己创建的类就不会有这样的待遇，因为toString()找不到toStringTag属性，只能返回默认的Object标签。
+（PS：有时候也可以用来判断数据的类型）
 默认情况下，类的[[Class]]返回[object Object]，如：
 class Person {}
 Object.prototype.toString.call(new Person());
