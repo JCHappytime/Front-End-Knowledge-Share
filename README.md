@@ -57,6 +57,7 @@ undefined 在 js 中不是一个保留字，这意味着我们可以使用 undef
 
 #### 3. Javascript 有几种类型的值，内存图长啥样？
 
+这是几乎每场面试时面试官都会问到的问题，所以重要性可以毫无疑问的说排第一。
 ```
 知识点：
 - 栈：基本数据类型（Undefined, Null, Boolean, Number, String, Symbol, BigInt）
