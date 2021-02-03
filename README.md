@@ -467,7 +467,8 @@ function a(a) {  //函数 } console.log(a)//10
 #### 12. js中的深浅拷贝实现？
 
 JavaScript存储对象都是存地址的，所以浅拷贝会导致 obj1 和obj2 指向同一块内存地址。改变了其中一方的内容，都是在原来的内存上做修改会导致拷贝对象和源对象都发生改变，
-而深拷贝是开辟一块新的内存地址，将原对象的各个属性逐个复制进去。对拷贝对象和源对象各自的操作互不影响。
+而
+是开辟一块新的内存地址，将原对象的各个属性逐个复制进去。对拷贝对象和源对象各自的操作互不影响。
 
 - 浅拷贝实现
 指的是将一个对象的属性值复制到另外一个对象，如果有的属性的值为引用类型的话，那么会将这个引用的地址复制给对象，因此两个对象会有同一个引用类型的引用。浅
@@ -516,6 +517,33 @@ function deepCopy(object) {
 ```
 **【思考：性能问题】**<br>
   尽管使用深拷贝会完全克隆一个新对象，不会产生副作用，但是深拷贝使用了递归，性能会不如浅拷贝，在开发中，还是要根据实际情况选择。
+
+**【JSON对象的parse和stringify】**<br> 
+  JSON对象是ES5中引入的新的类型（支持的浏览器为IE8+），JSON对象parse方法可以将JSON字符串反序列化成JS对象，stringify方法可以将JS对象序列化成JSON字符串，
+  借助这两个方法，也可以实现对象的深拷贝。
+  ```
+  //例1
+  var source = { name:"source", child:{ name:"child" } } 
+  var target = JSON.parse(JSON.stringify(source));
+  target.name = "target";  //改变target的name属性
+  console.log(source.name); //source 
+  console.log(target.name); //target
+  target.child.name = "target child"; //改变target的child 
+  console.log(source.child.name); //child 
+  console.log(target.child.name); //target child
+  //例2
+  var source = { name:function(){console.log(1);}, child:{ name:"child" } } 
+  var target = JSON.parse(JSON.stringify(source));
+  console.log(target.name); //undefined
+  //例3
+  var source = { name:function(){console.log(1);}, child:new RegExp("e") }
+  var target = JSON.parse(JSON.stringify(source));
+  console.log(target.name); //undefined
+  console.log(target.child); //Object {}
+  ```
+  这种方法使用较为简单，可以满足基本的深拷贝需求，而且能够处理JSON格式能表示的所有数据类型，但是对于正则表达式类型、函数类型等无法进行深拷贝(而且会直接丢失相应的值)。
+还有一点不好的地方是它会抛弃对象的constructor。也就是深拷贝之后，不管这个对象原来的构造函数是什么，在深拷贝之后都会变成Object。同时如果对象中存在循环引用的情况也无法
+正确处理。
   
 #### 13. 手写call, apply以及bind函数
 
