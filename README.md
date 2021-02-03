@@ -552,7 +552,10 @@ function deepCopy(object) {
   
 #### 13. 手写call, apply以及bind函数
 
-  首先了解一下三者的作用以及他们区别：[call, apply, bind的作用和区别](https://juejin.cn/post/6844903866358562824)
+  首先了解一下三者的作用以及他们区别<br>
+  1. [call, apply, bind的作用和区别](https://juejin.cn/post/6844903866358562824)
+  2. [this, apply, call, bind](https://juejin.cn/post/6844903496253177863)
+  
 - call函数实现
 
 **作用**<br>call和apply都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部this的指向。<br>
