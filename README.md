@@ -566,6 +566,16 @@ function deepCopy(object) {
   它们都是用来改变函数的执行上下文的。Javascript中一大特点是：函数存在【定义时上下文】、【运行时上下文】以及【上下文是可以改变的】这样的概念。
 不同点：
 1. call和apply都是为了改变某个函数运行时的上下文而存在的，换句话说就是为了改变函数体内部this的指向。
+  比如：
+  function fruits() {}
+  fruits.prototype = {
+    color: 'red',
+    show: function() {
+      console.log('My color is: ' + this.color);
+    }
+  };
+  var apple = new fruits;
+  apple.show(); // My color is red
 2. bind：我们一般说的绑定函数就是由bind来创建的
 ```
   
