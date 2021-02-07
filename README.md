@@ -238,9 +238,14 @@ result[5](); // 9
 1. [Vue2和Vue3双向数据绑定的区别](https://juejin.cn/post/6844904045237272583)
 
 【Vue2.x】<br>
-
+```
+Vue2.x采用es5中的Object.defineproperity()来实现双向绑定。
+```
 
 【Vue3.0】<br>
+```
+Vue3.0采用es6中新增的proxy()方法来实现。
+```
 
 ```
 1. Vue3.0的响应数据是包含在一个反应状态中的，因此当我们在HTML中取数据时应该这样{{ state.username }}而不是像以前一样{{ username }};
