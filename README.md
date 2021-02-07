@@ -236,6 +236,7 @@ result[5](); // 9
 - 双向绑定实现的区别
 【参考文章】<br>
 1. [Vue2和Vue3双向数据绑定的区别](https://juejin.cn/post/6844904045237272583)
+2.[Vue双向绑定原理](https://zhuanlan.zhihu.com/p/47541415)
 
 【Vue2.x】<br>
 ```
