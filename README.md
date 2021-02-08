@@ -854,7 +854,19 @@ Virtual DOM就是将真实DOM的数据抽取出来，以对象的形式模拟树
   <p>test</p>
 </div>
 ```
-
+抽象的Virtual DOM如下：
+```
+var Vnode = {
+  tag: 'div',
+  children: [
+    {
+      tag: 'p',
+      text: 'test',
+    }
+  ],
+};
+```
+可以看出，Vnode是一个对象，跟我们的oldVnode一样。
 
 
 
