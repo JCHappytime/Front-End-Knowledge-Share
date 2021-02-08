@@ -834,8 +834,20 @@ CSRF攻击的本质是利用cookie会在同源请求中携带发送给服务器�
 1.[详解Vue的diff算法](https://juejin.cn/post/6844903607913938951)<br>
 
 
-
 ![捕获](https://user-images.githubusercontent.com/10249805/107166141-0ca2de80-69f0-11eb-891d-5fe740374302.PNG)
+
+首先抛出几个问题：
+
+- 当数据发生变化时，vue是怎么更新节点的？ 
+  要知道渲染真实DOM的开销是非常大的。比如有时候我们修改了某个数据，如果直接渲染到真实dom上会引起整个dom树的重绘和重排，有没有可能我们只更新我们修改的那一小块dom
+而不要更新整个dom呢？diff算法就可以帮助我们。
+  我们先根据真实的dom生成一颗Virtual DOM，当Virtual DOM某个节点的数据改变后会生成一个新的Vnode，然后Vnode与oldVnode对比，发现有不一样的地方就直接修改在真实的
+DOM上，然后使oldVnode的值为Vnode。
+  diff的过程就是调用名为patch的函数，比较新旧节点，一边比较一边给真实的DOM打补丁。
+
+- Virtual DOM和真实DOM的区别是什么？
+
+
 
 
 
