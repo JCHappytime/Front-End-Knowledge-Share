@@ -883,6 +883,12 @@ var Vnode = {
 
 ![捕获](https://user-images.githubusercontent.com/10249805/107167168-15e17a80-69f3-11eb-9b67-5958b43e7941.PNG)
 
+这里，我们又可以联想到另外一个问题：[20. Vue3和Vue2的diff算法之间的区别](#-20-Vue3和vue2之间的区别)
+
+
+#### 20. Vue3和Vue2的diff算法之间的区别
+
+【参考文章】
 
 
 ## CSS
