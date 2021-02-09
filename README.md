@@ -892,7 +892,26 @@ var Vnode = {
 
 ![捕获](https://user-images.githubusercontent.com/10249805/107310373-3e3aa900-6ac7-11eb-93db-d1ae404bf492.PNG)
 
-
+那我们来具体分析一下patch时如何打补丁的，下面时patch方法的核心部分：
+```
+function patch (oldVnode, vnode) {
+    // 省略一些代码
+    if (sameVnode(oldVnode, vnode)) {
+    	patchVnode(oldVnode, vnode)
+    } else {
+    	const oEl = oldVnode.el; // 当前oldVnode对应的真实元素节点
+    	let parentEle = api.parentNode(oEl);  // 父元素
+    	createEle(vnode)  // 根据Vnode生成新元素
+    	if (parentEle !== null) {
+            api.insertBefore(parentEle, vnode.el, api.nextSibling(oEl)); // 将新元素添加进父元素
+            api.removeChild(parentEle, oldVnode.el);  // 移除以前的旧元素节点
+            oldVnode = null;
+    	}
+    }
+    // 省略一些代码
+    return vnode;
+}
+```
 
 
 #### 20. Vue3和Vue2 diff算法之间的区别
