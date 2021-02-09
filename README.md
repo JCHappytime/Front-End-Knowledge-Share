@@ -889,6 +889,9 @@ var Vnode = {
 - 4.那么diff算法的流程是什么呢？
 
 当数据发生改变时，set方法会调用Dep.notify通知所有订阅者Watcher，订阅者就会调用patch方法给真实的DOM打补丁，从而更新相应的视图。
+![捕获](https://user-images.githubusercontent.com/10249805/107310373-3e3aa900-6ac7-11eb-93db-d1ae404bf492.PNG)
+
+
 
 
 #### 20. Vue3和Vue2 diff算法之间的区别
