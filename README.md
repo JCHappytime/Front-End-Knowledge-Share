@@ -431,17 +431,21 @@ export default {
 a(a)  //调用函数 a = 10;  //变量
 var a;  //全局变量 //或者 var a = 10;  同上面两句
 function a(a) {  //函数 } console.log(a)//10
+
 ```
 浏览器对js代码的预解析，这是代码执行之前的操作，也叫变量提升。函数和定义变量会被提升到当前作用域最顶端，当函数名和定义变量名字一样时，函数名会覆盖变量定义。
 预解析完成后的代码：
 ```
+
 上面预解析完成后是
   function a(a) { }
   a(a) //调用函数
   a = 10; //给变量a重新赋值覆盖函数体
   console.log(a) //10
 ```
+
 2. 函数形参和变量声明是同一个变量
+3. 
 ```
   a(a)  //调用函数
   a = 10;  //变量
@@ -454,6 +458,7 @@ function a(a) {  //函数 } console.log(a)//10
   }
   var b;
   console.log(a)//10
+  
 ```
 当函数调用的时候，就要进入函数的局部作用域，浏览器还要重新在局部作用域中进行预解析，变量名定义提前，赋值不会提前。
 - 参数传递和函数中变量名冲突，函数形参的值会覆盖预解析的效果；
@@ -480,6 +485,7 @@ function a(a) {  //函数 } console.log(a)//10
   在编译阶段阶段，代码真正执行前的几毫秒，会检测到所有的变量和函数声明，所有这些函数和变量声明都被添加到JavaScript数据结构内的内存中。所以
   这些变量和函数能在它们真正被声明之前使用。
 **【本质理解-函数提升】**
+
 ```
   sayHi() // Hi there!
 
@@ -487,20 +493,25 @@ function a(a) {  //函数 } console.log(a)//10
       console.log('Hi there!')
   }
 ```
+
 因为函数声明在编译阶段会被添加到词法环境（Lexical Environment）中，当JavaScript引擎遇到sayHi()函数时，它会从词法环境中找到这个函数并执行它。
 **【本质理解-var变量提升】**
+
 ```
   console.log(name)   // 'undefined'
   var name = 'John Doe'
   console.log(name)   // John Doe
 ```
+
 上面的代码实际上分为两个部分：
 - var name表示声明变量name
 - = 'John Doe'表示的是为变量name赋值为'John Doe'。
+- 
 ```
   var name    // 声明变量
   name = 'John Doe' // 赋值操作
 ```
+
 只有声明操作var name会被提升，而赋值这个操作并不会被提升，但是为什么变量name的值会是undefined呢?
 原因是当JavaScript在编译阶段会找到var关键字声明的变量会添加到词法环境中，并初始化一个值undefined，在之后执行代码到赋值语句时，会把值赋值到这个变量。
 而let和const声明的变量，是存放在一个暂时性死区（dead zone）中，不会进行undefined的初始化，所以就会导致提前访问该变量时出现typeError，看起来像没有
