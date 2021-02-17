@@ -106,6 +106,7 @@ class Person1 {
  Object.prototype.toString.call(new Person1());
  => "[object Person1]"
 ```
+
 #### 5. 介绍一下Proxy是什么？
 
 ```
@@ -117,7 +118,8 @@ class Person1 {
 
 #### 6. 什么是闭包，为什么要用它？
 
-**【参考文章】**<br>
+**【参考文章】**
+
 1. [如何更好的理解Javascript闭包](https://www.zhihu.com/question/31383111)
 2. [我从来不理解 JavaScript 闭包，直到有人这样向我解释它...](https://blog.fundebug.com/2019/02/12/understand-javascript-closure/)
 
