@@ -152,6 +152,7 @@ result[5](); // 9
 一共有4种方法：
 
 （1）typeof
+
   typeof是一个操作符而不是函数，右侧跟一个一元表达式，并返回这个表达式的数据类型。返回的结果用该类型的字符串(全小写字母)形
   式表示，包括以下 7 种：number、boolean、symbol、string、object、undefined、function 等。有些时候，typeof 操作符会返
   回一些令人迷惑但技术上却正确的值：
