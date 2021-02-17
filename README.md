@@ -256,12 +256,14 @@ result[5](); // 9
 1. [Vue2和Vue3双向数据绑定的区别](https://juejin.cn/post/6844904045237272583)<br>
 2.[Vue双向绑定原理](https://zhuanlan.zhihu.com/p/47541415)
 
-【Vue2.x】<br>
+【Vue2.x】
+
 ```
 Vue2.x采用es5中的Object.defineproperity()来实现双向绑定。
 ```
 
-【Vue3.0】<br>
+【Vue3.0】
+
 ```
 Vue3.0采用es6中新增的proxy()方法来实现。
 ```
