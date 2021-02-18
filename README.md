@@ -876,12 +876,12 @@ var vm = {
 遍历data上的属性，进行改造，如下所示：
 // 利用 Object.defineProperty 定义一个属性 (eg：value) 描述符为存取描述符的属性
   Object.defineProperty(vm._data, 'value', {
-      enumerable: true, //是否可枚举
-      configurable: true, //是否可配置
-      set: function (newValue) { //set 派发watchers
-        vm.data.value = newValue; 
-        vm.valueWatchers.map(fn => fn(newValue));
-      },
+    enumerable: true, //是否可枚举
+    configurable: true, //是否可配置
+    set: function (newValue) { //set 派发watchers
+      vm.data.value = newValue; 
+      vm.valueWatchers.map(fn => fn(newValue));
+   },
       get: function () {  
         // 收集wachter vue中会在compile解析器中通过 显示调用 (this.xxx) 来触发get进行收集
         vm.valueWatchers.length = 0; 
@@ -894,9 +894,111 @@ var vm = {
 ```
 进行到这儿也已经实现了绑定，但是我们平时使用vue ，都是可以直接通过 this.xxx来获取和定义数据。那我们还需要进一步Proxy代理
 ```
+Object.defineProperty(vm, 'value', {
+  enumerable: true,
+  configurable: true,
+  set: function (newValue) {
+      this._data.value = newValue; //借助
+  },
+  get: function () {
+      return this._data.value; 
+  }
+})
+这样我们就把vm._data.value 代理到vm.value上了，可以通过其直接操作了。按照官方的写法应该是：
+function proxy (target, sourceKey, key) {
+  Object.defineProperty(target, key, {
+      enumerable: true,
+      configurable: true,
+      get() {
+          return this[sourceKey][key];
+      },
+      set(val) {
+          this[sourceKey][key] = val;
+      }
+  });
+}
 
+proxy(vm, '_data', 'value');
 ```
+完善后的完整代码如下：
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向绑定简单实现</title>
+</head>
+<body>
+<input type="text" id="inp" oninput="inputFn(this.value)">
+<br>
+<input type="text" id="inp2" oninput="inputFn(this.value)">
+<div id='div'></div>
+<script>
+    var inp = document.getElementById('inp');
+    var inp2 = document.getElementById('inp2');
+    var div = document.getElementById('div');
 
+    
+    function inputFn(value) {
+        div.innerText = vm.value = value;
+    }
+
+    function watcher(params) {
+        console.log(1)
+        div.innerText = inp.value = params; // 派发watcher
+    }
+
+    function watcher2(params) {
+        console.log(2)
+
+        div.innerText = inp2.value = params; // 派发watcher
+    }
+
+    function proxy (target, sourceKey, key) {
+        Object.defineProperty(target, key, {
+            enumerable: true,
+            configurable: true,
+            get() {
+                return this[sourceKey][key];
+            },
+            set(val) {
+                this[sourceKey][key] = val;
+            }
+        });
+    }
+
+	let handler = {
+        enumerable: true,
+        configurable: true,
+        set: function (newValue) {
+            vm.data.value = newValue; 
+            vm.valueWatchers.map(fn => fn(newValue));
+        },
+        get: function () {
+            vm.valueWatchers = []; //防止重复添加, 
+            vm.valueWatchers.push(watcher); 
+            vm.valueWatchers.push(watcher2); 
+            return vm.data.value; 
+        }
+    }
+
+    var vm = {
+        data: {},
+        _data: {},
+        value: '', 
+        valueWatchers: [] 
+    }
+    
+    Object.defineProperty(vm._data, 'value', handler)
+
+    proxy(vm, '_data', 'value');
+
+    vm.value;  //显示调用绑定
+
+</script>
+</body>
+</html>
+```
 
 #### 15. 什么是XSS攻击？如何防范XSS攻击？
 - 概念
