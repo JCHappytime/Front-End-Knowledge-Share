@@ -792,6 +792,12 @@ var module= {
 
 #### 14. Vue3相比Vue2新增了哪些功能？
 
+【参考文章】
+
+1. [Vue2和Vue3的区别](https://www.jianshu.com/p/ad38a1f27d0f)
+
+- 前言
+
 
 #### 15. 什么是XSS攻击？如何防范XSS攻击？
 - 概念
