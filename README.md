@@ -809,8 +809,10 @@ Vue2实现双向绑定原理，主要是利用Object.defineProperty来给实例d
 这个环节中包含了三个部分：
 ```
 1. Observer用来监听拦截data的属性为监察者；
-2. Dep用来添加订阅者，为订阅器；
-3. Watcher就是订阅者。
+ 
+3. Dep用来添加订阅者，为订阅器；
+
+5. Watcher就是订阅者。
 ```
 
 
