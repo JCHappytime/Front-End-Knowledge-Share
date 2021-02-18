@@ -849,7 +849,30 @@ JS:
 
 如果只需要实现一个简单的双向绑定，那么上面的代码就已经实现了。
 ```
+（2）进一步完善模拟Vue实现
+```
+首先我们将watcher抽出来，备用。
+  function watcher(params) {
+    div.innerText = inputId.value = params; // 派发watcher
+  }
 
+声明一个vm来模拟vue的实例，并初始化：
+var vm = {
+  //类似vue实例上的data
+  data: {
+      value: ''
+  }, 
+
+  // vue私有, _data的所有属性为data中的所有属性被改造为 getter/setter 之后的。
+  _data: {
+      value: ''
+  }, 
+  // 代理到vm对象上，可以实现vm.value
+  value: '', 
+  //value的订阅器用来收集订阅者 
+  valueWatchers:[] 
+}
+```
 
 
 #### 15. 什么是XSS攻击？如何防范XSS攻击？
