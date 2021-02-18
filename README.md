@@ -818,7 +818,37 @@ Vue2实现双向绑定原理，主要是利用Object.defineProperty来给实例d
 **简单实现**
 
 (1) 通过对set和get的拦截，在get阶段进行依赖收集，在set阶段通知该属性上所有绑定的依赖。如下所示，我们将data的value属性绑定在set和get上，通过_value来进行操作。
+```
+HTML:
+  <input type="text" id="inputId" oninput="handleInput(this.value)">
+  <div id="div"></div>
 
+JS:
+  var inputId = document.getElementById('inputId');
+  var div = document.getElementById('div');
+  var data = {
+    value:''
+  }
+  var _data = {
+    value:''
+  }
+  Object.defineProperty(_data, 'value', {
+    enumerable: true,
+    configurable: true,
+    set: function (newValue) {
+        data.value = newValue; //watcher
+        div.innerText = data.value
+    },
+    get: function () {
+        return data.value;
+    }
+  })
+  function handleInput(value) {
+    _data.value = value;
+  }
+
+如果只需要实现一个简单的双向绑定，那么上面的代码就已经实现了。
+```
 
 
 
