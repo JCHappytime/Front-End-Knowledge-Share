@@ -813,7 +813,13 @@ Vue2实现双向绑定原理，主要是利用Object.defineProperty来给实例d
 3. Dep用来添加订阅者，为订阅器；
 
 5. Watcher就是订阅者。
+监察者通过Dep向Watcher发布更新消息。
 ```
+**简单实现**
+
+(1) 通过对set和get的拦截，在get阶段进行依赖收集，在set阶段通知该属性上所有绑定的依赖。如下所示，我们将data的value属性绑定在set和get上，通过_value来进行操作。
+
+
 
 
 #### 15. 什么是XSS攻击？如何防范XSS攻击？
