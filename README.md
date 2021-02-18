@@ -872,6 +872,29 @@ var vm = {
   //value的订阅器用来收集订阅者 
   valueWatchers:[] 
 }
+
+遍历data上的属性，进行改造，如下所示：
+// 利用 Object.defineProperty 定义一个属性 (eg：value) 描述符为存取描述符的属性
+  Object.defineProperty(vm._data, 'value', {
+      enumerable: true, //是否可枚举
+      configurable: true, //是否可配置
+      set: function (newValue) { //set 派发watchers
+        vm.data.value = newValue; 
+        vm.valueWatchers.map(fn => fn(newValue));
+      },
+      get: function () {  
+        // 收集wachter vue中会在compile解析器中通过 显示调用 (this.xxx) 来触发get进行收集
+        vm.valueWatchers.length = 0; 
+        vm.valueWatchers.push(watcher); 
+        return vm.data.value; 
+    }
+  })
+    <!--直接通过显示调用来触发get进行绑定 vue中是在compile解析器中来进行这一步-->
+    vm._data.value 
+```
+进行到这儿也已经实现了绑定，但是我们平时使用vue ，都是可以直接通过 this.xxx来获取和定义数据。那我们还需要进一步Proxy代理
+```
+
 ```
 
 
