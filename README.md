@@ -30,6 +30,7 @@
 - [19. 虚拟DOM以及diff算法](#19-虚拟DOM以及diff算法)
 - [20. Vue3和Vue2 diff算法之间的区别](#20-Vue3和vue2-diff算法之间的区别)
 - [21. 事件冒泡与事件捕获](#21-事件冒泡与事件捕获)
+- [22. javascript的垃圾回收机制](#22-javascript的垃圾回收机制)
 
 
 #### 1. js基本数据类型介绍
@@ -1151,8 +1152,17 @@ function patch (oldVnode, vnode) {
 
 
 #### 21. 事件冒泡与事件捕获
+
 【参考文章】
 1. [你真的了解事件冒泡与事件捕获吗？](https://juejin.cn/post/6844903834075021326)
+
+
+#### 22. javascript的垃圾回收机制
+【参考文章】
+1. [JavaScript 垃圾回收机制](https://juejin.cn/post/6844903858972409869)
+
+
+
 
 
 ## CSS
