@@ -1158,9 +1158,11 @@ function patch (oldVnode, vnode) {
 
 
 #### 22. javascript的垃圾回收机制
+
 【参考文章】
 1. [JavaScript 垃圾回收机制](https://juejin.cn/post/6844903858972409869)
 
+PS: 文章中描述得比较清楚，不再单独讲述，请参考以上文章。
 
 
 
