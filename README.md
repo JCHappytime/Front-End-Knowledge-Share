@@ -1179,11 +1179,36 @@ PS: 文章中描述得比较清楚，不再单独讲述，请参考以上文章�
 
 - 前言
 
-在进行窗口的resize、scroll，输入框内容校验等操作时，如果事件处理函数调用的频率去限制，会加重浏览器的负担，导致用户体验非常差。此时我们就可以使用debounce(防抖)和throottle（节流）
-的方式来减少调用频率，同时也不影响实际效果。
+在进行窗口的resize、scroll，输入框内容校验等操作时，如果事件处理函数调用的频率去限制，会加重浏览器的负担，导致用户体验非常差。
+此时我们就可以使用debounce(防抖)和throottle（节流）的方式来减少调用频率，同时也不影响实际效果。
 
-什么是防抖？
+什么是防抖？（主要是函数防抖）
 
+当持续触发事件时，一定时间段内没有再触发事件，事件处理函数才会执行一次，如果设定的时间到来之前，又一次触发了时间，就重新开始延时。
+如下图，持续触发scroll事件时，并不执行handle函数，当1000ms内没有触发scroll事件时，才会延时触发scroll事件。
+![捕获](https://user-images.githubusercontent.com/10249805/108584744-ba15da80-737e-11eb-9561-06672d5fd28a.PNG)
+
+那一起来看看如何实现一个简单的debounce吧。
+
+```
+function debounce(fun, delay) {
+  let time = null;
+  return function() {
+    if (time !== null) {
+      clearTimeout(time);
+      time = setTimeout(func, delay);
+    }
+  }
+}
+
+// 处理函数
+function handle() {
+  console.log('我被触发了');
+}
+
+// 滚动事件
+window.addEventListener('scroll', debounce(handle, 1000));
+```
 
 
 
