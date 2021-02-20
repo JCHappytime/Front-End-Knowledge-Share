@@ -636,8 +636,12 @@ function deepCopy(object) {
   
 - call函数实现
 
-**作用**<br>call和apply都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部this的指向。<br>
-**实现步骤**<br>
+**作用**
+
+call和apply都是为了改变某个函数运行时的上下文（context）而存在的，换句话说，就是为了改变函数体内部this的指向。
+
+**实现步骤**
+
 1.判断调用对象是否为函数，即使我们是定义在函数原型上的，但是可能出现使用call等方式调用的情况。
 2.判断传入上下文对象是否存在，如果不存在，则设置为window;
 3.处理传入的参数，截取第一个参数后的所有参数；
@@ -645,6 +649,7 @@ function deepCopy(object) {
 5.使用上下文对象来调用这个方法，并保存返回结果；
 6.删除刚才新增的属性。
 7.返回结果。
+8.
 ```
 Function.prototype.myCall = function(context) {
   // 判断调用对象
@@ -1370,7 +1375,20 @@ flex布局可以很方便的实现垂直与水平居中，好处很多，在移�
 - 定位+top, left, margin-top, margin-left
 
 ```
+.item-middle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  background: blue;
+}
 ```
+如下图所示：
+
+![捕获](https://user-images.githubusercontent.com/10249805/108591327-31f5fc00-73a3-11eb-898c-a6b145eae8da.PNG)
 
 
 
