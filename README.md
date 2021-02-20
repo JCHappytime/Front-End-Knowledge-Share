@@ -1208,7 +1208,23 @@ PS: 文章中描述得比较清楚，不再单独讲述，请参考以上文章�
 
 1. [Vue-生命周期函数](https://mp.weixin.qq.com/s/rzkrHlNW9g9RhwdMHaQkDA)
 
+- 生命周期每个阶段作用分析
 
+（1）beforeCreate
+
+实例初始化之后调用beforeCreate，此时的数据观察和事件配置都没有准备好。此时实例中的data和el都还是undefined，不可用。
+
+（2）created
+
+在实例创建完成之后立即调用created，此时我们能够读取到数据data的值，但是dom还没有生成，所以属性el还不存在。
+
+（3）beforeMount
+
+在挂载开始之前被调用，此阶段为即将挂载，此时el不再是undefined，而是成功关联到我们制定的dom节点，但此时的变量如：{{ name }}还没有被成功地渲染成我们data中的数据。
+
+（4）mounted
+
+挂载完毕后调用，到了这个阶段，数据就会被成功渲染出来。
 
 ## 性能优化相关
 
