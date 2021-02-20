@@ -1209,7 +1209,7 @@ function handle() {
 // 滚动事件
 window.addEventListener('scroll', debounce(handle, 1000));
 ```
-
+可以看到，当持续触发scroll事件时，事件处理函数handle只在停止滚动1000毫秒之后才会调用一次，也就是说在持续触发scroll事件的过程中，事件处理函数handle一直没有执行。
 
 
 
