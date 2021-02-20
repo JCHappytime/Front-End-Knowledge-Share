@@ -1302,9 +1302,43 @@ window.addEventListener('scroll', throttle_timer(handle, 1000));
 
 
 
+
+
 #### 1. 垂直居中的实现方式有哪些？
 
+【参考文章】
 
+1. [CSS实现垂直居中的几种方法](https://juejin.cn/post/6844903843193470983)
+
+- 前言
+
+水平居中的实现方式比较简单，对于块级元素而言，设置margin: 0 auto和父元素text-align: center就可以实现。垂直居中相对而言就要复杂一些。
+
+- flex布局
+
+flex布局可以很方便的实现垂直与水平居中，好处很多，在移动端使用比较广泛，不好的地方就是浏览器兼容性不好。代码如下：
+
+```
+//html
+<div class="main">
+  <div class="middle"></div>
+</div>
+
+//css
+.main {
+  width: 60px;
+  height: 10%;
+  background: #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middle{
+  width: 30%;
+  height: 50%;
+  background: red;
+}
+```
 
 
 ## Vue框架
