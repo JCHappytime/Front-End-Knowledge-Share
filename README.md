@@ -37,7 +37,7 @@
 
 【参考文章】
 
-1.[Javascript的基本数据类型分析和判断](https://juejin.cn/post/6844903623231537159)
+1. [Javascript的基本数据类型分析和判断](https://juejin.cn/post/6844903623231537159)
 
 ```
 js 一共有六种基本数据类型，分别是:
