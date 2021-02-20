@@ -1182,7 +1182,7 @@ PS: 文章中描述得比较清楚，不再单独讲述，请参考以上文章�
 在进行窗口的resize、scroll，输入框内容校验等操作时，如果事件处理函数调用的频率去限制，会加重浏览器的负担，导致用户体验非常差。
 此时我们就可以使用debounce(防抖)和throottle（节流）的方式来减少调用频率，同时也不影响实际效果。
 
-什么是防抖？（主要是函数防抖）
+**什么是防抖？**
 
 当持续触发事件时，一定时间段内没有再触发事件，事件处理函数才会执行一次，如果设定的时间到来之前，又一次触发了时间，就重新开始延时。
 如下图，持续触发scroll事件时，并不执行handle函数，当1000ms内没有触发scroll事件时，才会延时触发scroll事件。
@@ -1211,7 +1211,40 @@ window.addEventListener('scroll', debounce(handle, 1000));
 ```
 可以看到，当持续触发scroll事件时，事件处理函数handle只在停止滚动1000毫秒之后才会调用一次，也就是说在持续触发scroll事件的过程中，事件处理函数handle一直没有执行。
 
+**什么是节流？**
 
+函数节流(throttle)：当持续触发事件时，保证一定时间段内只调用一次事件处理函数。节流通俗解释就比如我们水龙头放水，阀门一打开，水哗啦啦的就往下流，我们就会想着要把水
+龙头关小一点，最好是按照我们的意愿按照一定规律在某个时间间隔内一滴一滴地往下滴。如下图：持续触发scroll事件时，并不立即执行handle函数，每隔100毫秒才会执行一次handle函数。
+
+![捕获](https://user-images.githubusercontent.com/10249805/108589105-b17dce00-7397-11eb-936d-0642eb62ca55.PNG)
+
+函数节流主要有2种实现方法：时间戳和定时器。接下来分别用2种方法来实现throttle。
+
+1.时间戳
+
+```
+throttle_timestamp(func, delay) {
+    let prev = Date.now();
+    return function() {
+      let context = this;
+      let args = arguments;
+      let now = Date.now();
+      if (now - prev >= delay) {
+        func.apply(context, args);
+        prev = Date.now();
+      }
+    };
+  }
+// 处理函数
+function handle() {
+  console.log('我被触发了');
+}
+
+// 滚动事件
+window.addEventListener('scroll', throttle_timestamp(handle, 1000));
+```
+当高频事件触发时，第一次会立即执行（给scroll事件绑定函数与真正触发事件的间隔一般大于delay），而后再怎么频繁地触发事件，也都是每delay时间才执行一次。
+而当最后一次事件触发完毕后，事件再也不会被执行了。
 
 ## CSS
 | 题目         | 大概内容                    |
