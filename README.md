@@ -1220,7 +1220,7 @@ window.addEventListener('scroll', debounce(handle, 1000));
 
 函数节流主要有2种实现方法：时间戳和定时器。接下来分别用2种方法来实现throttle。
 
-1.时间戳
+1. 时间戳
 
 ```
 throttle_timestamp(func, delay) {
@@ -1235,6 +1235,7 @@ throttle_timestamp(func, delay) {
       }
     };
   }
+  
 // 处理函数
 function handle() {
   console.log('我被触发了');
@@ -1245,6 +1246,33 @@ window.addEventListener('scroll', throttle_timestamp(handle, 1000));
 ```
 当高频事件触发时，第一次会立即执行（给scroll事件绑定函数与真正触发事件的间隔一般大于delay），而后再怎么频繁地触发事件，也都是每delay时间才执行一次。
 而当最后一次事件触发完毕后，事件再也不会被执行了。
+
+2. 定时器
+
+```
+throttle_timer(func, delay) {
+    let timer = null;
+    return function() {
+      let context = this;
+      let args = arguments;
+      if (!timer) {
+        timer = setTimeout(function() {
+          func.apply(context, args);
+          timer = null;
+        }, delay);
+      }
+    };
+  }
+  
+// 处理函数
+function handle() {
+  console.log('我被触发了');
+}
+
+// 滚动事件
+window.addEventListener('scroll', throttle_timer(handle, 1000));
+```
+当触发事件的时候，我们设置一个定时器，再次触发事件的时候，如果定时器存在，就不执行，直到delay时间后，定时器执行函数并清空定时器，这样就可以设置下一个定时器。
 
 ## CSS
 | 题目         | 大概内容                    |
