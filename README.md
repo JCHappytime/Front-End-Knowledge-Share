@@ -23,7 +23,7 @@
 - [9. this的指向问题](#9-thisthis的指向问题)
 - [10. 作用域和作用域链](#10-作用域和作用域链)
 - [11. 浏览器预解析变量提升](#11-浏览器预解析变量提升)
-- [12. js中的深浅拷贝实现？](#12-js中的深浅拷贝实现) 
+- [12. js中的深浅拷贝实现？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/4) 
 - [13. 手写call, apply以及bind函数](#13-手写call-apply以及bind函数)
 - [14. Vue3相比Vue2新增了哪些功能？](#14-Vue3相比Vue2新增了哪些功能)
 - [15. 什么是XSS攻击？如何防范XSS攻击？](#15-什么是XSS攻击如何防范XSS攻击)
