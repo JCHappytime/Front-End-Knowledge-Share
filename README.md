@@ -76,9 +76,6 @@ class Person1 {
 
 **【参考文章】**
 
-1. [如何更好的理解Javascript闭包](https://www.zhihu.com/question/31383111)
-2. [我从来不理解 JavaScript 闭包，直到有人这样向我解释它...](https://blog.fundebug.com/2019/02/12/understand-javascript-closure/)
-
 ```
 1）闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见方式就是在一个函数内创建另一个函数，创建的函数
 可以访问到当前函数的局部变量；
