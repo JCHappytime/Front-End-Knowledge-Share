@@ -12,7 +12,7 @@
 | Javascript相关面试题 | js的基本数据类型，es6语法，原型链，事件循环，|
 
 ### 目录
-- [1. js基本数据类型介绍](#1-js基本数据类型介绍)
+- [1. js基本数据类型介绍](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [2. undefined和null有什么区别](#2-undefined和null有什么区别)
 - [3. Javascript 有几种类型的值，内存图长啥样？](#3-Javascript-有几种类型的值内存图长啥样)
 - [4. 内部属性[[Class]]是什么？](#4-内部属性Class是什么)
