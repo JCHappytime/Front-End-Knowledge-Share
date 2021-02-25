@@ -29,7 +29,7 @@
 - [15. 什么是XSS攻击？如何防范XSS攻击？](#15-什么是XSS攻击如何防范XSS攻击)
 - [16. 什么是CSP？](#16-什么是CSP)
 - [17. 什么是CSRF攻击？如何防范CSRF攻击？](#17-什么是CSRF攻击如何防范CSRF攻击)
-- [18. 原型，原型链和继承有什么特点？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/10)
+- [18. 原型，原型链和继承的关系，如何实现继承？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/10)
 - [19. 虚拟DOM以及diff算法](#19-虚拟DOM以及diff算法)
 - [20. Vue3和Vue2 diff算法之间的区别](#20-Vue3和vue2-diff算法之间的区别)
 - [21. 事件冒泡与事件捕获](#21-事件冒泡与事件捕获)
