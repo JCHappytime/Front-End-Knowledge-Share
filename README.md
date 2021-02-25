@@ -13,6 +13,15 @@
 
 ### 目录
 - [1. JS数据类型有哪些？如何进行类型判断？不同类型的内存大是怎样的？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
+- [闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
+
+
+
+
+
+
+
+
 - [4. 内部属性[[Class]]是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/20)
 - [5. 介绍一下Proxy是什么？](#5-介绍一下Proxy是什么)
 - [6. 闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
