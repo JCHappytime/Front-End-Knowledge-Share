@@ -13,8 +13,6 @@
 
 ### 目录
 - [1. js基本数据类型介绍](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
-- [2. undefined和null有什么区别](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
-- [3. Javascript 有几种类型的值，内存图长啥样？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [4. 内部属性[[Class]]是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/20)
 - [5. 介绍一下Proxy是什么？](#5-介绍一下Proxy是什么)
 - [6. 闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
