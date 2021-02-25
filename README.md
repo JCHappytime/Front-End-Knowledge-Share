@@ -17,7 +17,7 @@
 - [3. Javascript 有几种类型的值，内存图长啥样？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [4. 内部属性[[Class]]是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/20)
 - [5. 介绍一下Proxy是什么？](#5-介绍一下Proxy是什么)
-- [6. 什么是闭包，为什么要用它？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
+- [6. 闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
 - [7. js类型判断有哪些方式？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [8. Vue3和Vu2之间有什么区别？](#8-Vue3和Vu2之间有什么区别)
 - [9. this的指向问题](#9-thisthis的指向问题)
