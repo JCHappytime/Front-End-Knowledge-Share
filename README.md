@@ -15,7 +15,7 @@
 - [1. js基本数据类型介绍](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [2. undefined和null有什么区别](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [3. Javascript 有几种类型的值，内存图长啥样？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
-- [4. 内部属性[[Class]]是什么？](#4-内部属性Class是什么)
+- [4. 内部属性[[Class]]是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/20)
 - [5. 介绍一下Proxy是什么？](#5-介绍一下Proxy是什么)
 - [6. 什么是闭包，为什么要用它？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
 - [7. js类型判断有哪些方式？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
