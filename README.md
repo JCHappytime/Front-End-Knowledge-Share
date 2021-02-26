@@ -22,6 +22,17 @@
 - [8. webpack中有哪些常用的plugin，分别是什么作用？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/9)
 - [9. 原型，原型链和继承的关系，如何实现继承？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/10)
 
+
+
+
+
+
+
+
+
+
+
+
 - [4. 内部属性[[Class]]是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/20)
 - [5. 介绍一下Proxy是什么？](#5-介绍一下Proxy是什么)
 - [6. 闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
