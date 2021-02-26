@@ -16,7 +16,7 @@
 - [2. 闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
 - [3. 讲讲深拷贝与浅拷贝，如何实现，有哪些方式？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/4)
 - [4. 讲一讲 JavaScript 的垃圾回收机制](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/5)
-
+- [5. Vue的生命周期有哪些？每个周期内完成的功能是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/6)
 
 
 
