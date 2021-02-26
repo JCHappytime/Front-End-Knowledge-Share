@@ -18,7 +18,7 @@
 - [4. 讲一讲 JavaScript 的垃圾回收机制](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/5)
 - [5. Vue的生命周期有哪些？每个周期内完成的功能是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/6)
 - [6. 垂直居中的几种实现方案 ](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/7)
-- [7. 你能用几种方案实现双栏布局？]
+- [7. 你能用几种方案实现双栏布局？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/8)
 
 
 
