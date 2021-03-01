@@ -23,6 +23,7 @@
 - [9. 原型，原型链和继承的关系，如何实现继承？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/10)
 - [10. 讲讲es6的新特性主要有哪些？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/11)
 - [11. http协议，缓存协议（强缓存+协商缓存）](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/12)
+- [12. 具体详细的讲一讲MVVM数据绑定的原理+实现]
 
 
 
