@@ -24,7 +24,7 @@
 - [10. 讲讲es6的新特性主要有哪些？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/11)
 - [11. http协议，缓存协议（强缓存+协商缓存）](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/12)
 - [12. 具体详细的讲一讲MVVM数据绑定的原理+实现](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/13)
-- [13. call, bind, apply,三者的关系和区别]()
+- [13. call, bind, apply,三者的关系和区别](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/14)
 
 
 
