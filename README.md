@@ -22,7 +22,7 @@
 - [8. webpack中有哪些常用的plugin，分别是什么作用？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/9)
 - [9. 原型，原型链和继承的关系，如何实现继承？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/10)
 - [10. 讲讲es6的新特性主要有哪些？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/11)
-
+- [11. http协议，缓存协议（强缓存+协商缓存）]()
 
 
 
