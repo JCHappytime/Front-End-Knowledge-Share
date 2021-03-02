@@ -12,7 +12,7 @@
 | Javascript相关面试题 | js的基本数据类型，es6语法，原型链，事件循环，|
 
 ### 目录
-- [1. JS数据类型有哪些？如何进行类型判断？不同类型的内存大是怎样的？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
+- [1. JS数据类型有哪些？如何进行类型判断？不同类型的内存图大致是怎样的？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [2. 闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
 - [3. 讲讲深拷贝与浅拷贝，如何实现，有哪些方式？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/4)
 - [4. 讲一讲 JavaScript 的垃圾回收机制](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/5)
