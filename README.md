@@ -49,7 +49,7 @@
 
 ### 目录
 - [1. Vue的生命周期有哪些？每个周期内完成的功能是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/6)
-- [2. MVVM的原理是什么](#2-MVVM的原理是什么)
+- [2. 具体详细的讲一讲MVVM数据绑定的原理+实现](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/13)
 
 
 
