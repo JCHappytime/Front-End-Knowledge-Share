@@ -53,40 +53,6 @@
 
 
 
-#### 1. Vue的生命周期钩子有哪些,每个生命周期实现什么功能？
-
-【参考文章】
-
-1. [Vue-生命周期函数](https://mp.weixin.qq.com/s/rzkrHlNW9g9RhwdMHaQkDA)
-
-- 生命周期每个阶段作用分析
-
-（1）beforeCreate
-
-实例初始化之后调用beforeCreate，此时的数据观察和事件配置都没有准备好。此时实例中的data和el都还是undefined，不可用。
-
-（2）created
-
-在实例创建完成之后立即调用created，此时我们能够读取到数据data的值，但是dom还没有生成，所以属性el还不存在。
-
-（3）beforeMount
-
-在挂载开始之前被调用，此阶段为即将挂载，此时el不再是undefined，而是成功关联到我们制定的dom节点，但此时的变量如：{{ name }}还没有被成功地渲染成我们data中的数据。
-
-（4）mounted
-
-挂载完毕后调用，到了这个阶段，数据就会被成功渲染出来。如果此时打印属性$el，就会看到{{name}}已经被成功的渲染成data.name里面的内容了。
-
-（5）beforeUpdate
-
-我们知道，当修改vue实例的data时，vue就会自动帮我们更新渲染视图，在这个过程中，vue提供了beforeUpdate这个钩子，在检测到我们要修改数据时，更新渲染视图
-之前就会触发钩子beforeUpdate。
-
-
-#### 2. MVVM的原理是什么
-
-
-
 ## 性能优化相关
 
 ### 目录
