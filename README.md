@@ -48,7 +48,7 @@
 | Vue相关面试题 | Vue生命周期，MVVM原理，Vue3与Vue2对比，|
 
 ### 目录
-- [1. Vue的生命周期钩子有哪些,每个生命周期实现什么功能？](#1-Vue的生命周期钩子有哪些每个生命周期实现什么功能)
+- [1. Vue的生命周期有哪些？每个周期内完成的功能是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/6)
 - [2. MVVM的原理是什么](#2-MVVM的原理是什么)
 
 
