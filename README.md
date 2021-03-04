@@ -27,6 +27,7 @@
 - [15. 你应该知道的几个webpack优化方法](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/16)
 - [16. 说一说JavaScript的事件循环机制（Event Loop）](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/17)
 - [17. 讲一讲你知道的前端性能优化方案](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/18)
+- [18. 从输入URL到最终展示页面的过程中发生了什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/19)
 
 
 
