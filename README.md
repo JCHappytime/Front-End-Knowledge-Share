@@ -33,6 +33,7 @@
 
 - [1. 垂直居中的几种实现方案 ](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/7)
 - [2. 你能用几种方案实现双栏布局？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/8)
+- [3. CSS选择器的优先级顺序是怎样的呢？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/25)
 
 
 
