@@ -28,7 +28,7 @@
 - [16. 说一说JavaScript的事件循环机制（Event Loop）](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/17)
 - [17. 讲一讲你知道的前端性能优化方案](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/18)
 - [18. 从输入URL到最终展示页面的过程中发生了什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/19)
-
+- [19. 你了解内部属性[[class]]吗？内部属性[[Class]]是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/20)
 
 
 
