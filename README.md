@@ -56,7 +56,7 @@
 - [3. 讲一讲你知道的前端性能优化方案](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/18)
 - [4. 防抖与节流](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/23)
 - [5. 如何最大程度的优化webpack打包速度？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/27)
-- [5. hash，contenthash，chunkhash的区别](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/29)
+- [6. hash，contenthash，chunkhash的区别](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/29)
 
 
 
