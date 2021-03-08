@@ -20,7 +20,7 @@
 - [10. 从输入URL到最终展示页面的过程中发生了什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/19)
 - [11. 你了解内部属性[[class]]吗？内部属性[[Class]]是什么？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/20)
 - [12. 你使用过node吗？在你做过的项目中有哪些node的应用？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/21)
-
+- [13. 讲一讲JavaScript设计模式中的单例模式](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/31)
 
 
 
