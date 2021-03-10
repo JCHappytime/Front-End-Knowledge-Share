@@ -24,7 +24,6 @@
 - [14. ES6的箭头函数中this有什么特点？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/32)
 
 
-
 ## 2. CSS
 
 ### 目录
