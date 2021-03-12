@@ -42,7 +42,6 @@
 - [5. 具体详细的讲一讲MVVM数据绑定的原理+实现](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/13)
 - [6. 为什么Vue中不要用index作为key？实际在问diff算法](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/28)
 
-
 ## 4. 前端性能优化与webpack
 
 ### 目录
