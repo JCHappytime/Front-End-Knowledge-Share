@@ -59,5 +59,5 @@
 ### 目录
 
 - [1. 写一个js函数，实现对一个数字每3位加一个逗号，如输入100000， 输出100,000（不考虑负数，小数)](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/34)
-- [2. 统计一个字符串出现最多的字母：给出一段英文连续的英文字符窜，找出重复出现次数最多的字母](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/34)
+- [2. 统计一个字符串出现最多的字母：给出一段英文连续的英文字符窜，找出重复出现次数最多的字母](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/35)
 
