@@ -22,7 +22,6 @@
 - [12. 你使用过node吗？在你做过的项目中有哪些node的应用？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/21)
 - [13. 讲一讲JavaScript设计模式中的单例模式](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/31)
 - [14. ES6的箭头函数中this有什么特点？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/32)
-- [15. 写一个js函数，实现对一个数字每3位加一个逗号，如输入100000， 输出100,000（不考虑负数，小数)](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/34)
 
 ## 2. CSS
 
@@ -53,3 +52,5 @@
 - [4. 讲一讲防抖与节流](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/23)
 - [5. 如何最大程度的优化webpack打包速度？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/27)
 - [6. hash，contenthash，chunkhash的区别](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/29)
+
+## 5. 算法
