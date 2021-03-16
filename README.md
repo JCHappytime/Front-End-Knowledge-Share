@@ -54,7 +54,7 @@
 - [6. hash，contenthash，chunkhash的区别](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/29)
 
 ## 5. 算法
-几乎在所有大厂的面试中，算法是面试者永远无法逃避的一个重要知识点。
+几乎在所有大厂的面试中，算法是面试者永远无法逃避的一个重点内容。
 
 ### 目录
 
