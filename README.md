@@ -62,6 +62,7 @@
 - [2. 统计一个字符串出现最多的字母：给出一段英文连续的英文字符窜，找出重复出现次数最多的字母](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/35)
 
 ## 6. 项目构建
+前端知识确实庞大且繁杂，但实际工作中除了对基础知识的要求之外，项目整体自动化构建及自动化测试也成了不可缺少的技术栈。
 
 - [1. 项目持续构建，自动化部署-Jenkins+Docker](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/37)
 
