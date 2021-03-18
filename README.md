@@ -65,7 +65,7 @@
 ## 6. 项目构建
 前端知识确实庞大且繁杂，但实际工作中除了对基础知识的要求之外，项目整体自动化构建及自动化测试也成了不可缺少的技术栈。
 
-- [1. 项目持续构建，自动化部署-Jenkins+Docker](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/37)
+- [1. Continuous project building & Automatic Deployment-Jenkins+Docker](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/37)
 - [2. Sharing of Automatic Testing Tools-Cypress](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/33)
 
 
