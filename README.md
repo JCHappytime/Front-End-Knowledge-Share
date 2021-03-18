@@ -1,6 +1,6 @@
 # Front-End-Interview & Personal blog share
 
-- 分享一些前端知识和面试题，包括：[JavaScript](#1-JavaScript面试知识点总结)，[CSS](#2-CSS)，[Vue](#3-Vue相关)，[前端性能优化与webpack](#4-前端性能优化与webpack)，[算法](#5-算法)相关的内容。
+- 分享一些前端知识和面试题，包括：[JavaScript](#1-JavaScript面试知识点总结)，[CSS](#2-CSS)，[Vue](#3-Vue相关)，[前端性能优化与webpack](#4-前端性能优化与webpack)，[算法](#5-算法)，[项目构建](#6-项目构建)相关的内容。
 - 这个库会不定期地更新和分享。
 - 收藏请点Star，订阅请点Watch。👋👋👋
 - 如果大家在阅读的过程中发现有出错的地方，欢迎留言指正。
