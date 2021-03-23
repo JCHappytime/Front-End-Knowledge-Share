@@ -31,7 +31,12 @@ JavaScript是ECMAScript规范的一种实现。
 - 异步和单线程
 - 前端异步的场景
 
-
+5. ES6/7 新标准考查
+- 箭头函数
+- Module
+- Class
+- Set 和Map
+- Promise
 
 
 ### 目录
