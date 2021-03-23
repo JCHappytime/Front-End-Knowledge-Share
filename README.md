@@ -7,6 +7,16 @@
 
 ## 1. JavaScript面试知识点总结
 
+### 知识点梳理
+
+JavaScript是ECMAScript规范的一种实现。
+
+- 变量类型
+
+```JS```的数据类型分类和判断。
+- 
+
+
 ### 目录
 - [1. JS数据类型有哪些？如何进行类型判断？不同类型的内存图大致是怎样的？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [2. 闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
