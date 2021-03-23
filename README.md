@@ -11,9 +11,9 @@
 
 JavaScript是ECMAScript规范的一种实现。
 
-- 变量类型
+1. 变量类型
+<code>JS</code>的数据类型分类和判断
 
-```JS```的数据类型分类和判断。
 - 
 
 
