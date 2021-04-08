@@ -8,6 +8,7 @@
 ## 1. JavaScript面试知识点总结
 
 ### 目录
+
 - [1. JS数据类型有哪些？如何进行类型判断？不同类型的内存图大致是怎样的？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
 - [2. 闭包是什么，原理是什么，怎么用？哪些场景下会用到？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/3)
 - [3. 讲讲深拷贝与浅拷贝，如何实现，有哪些方式？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/4)
@@ -63,6 +64,7 @@
 - [3. 斐波那契数列：1、1、2、3、5、8、13、21。输入n，输出数列中第n位数的值。](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/36)
 
 ## 6. 工具分享
+
 前端知识确实庞大且繁杂，但实际工作中除了对基础知识的要求之外，项目整体自动化构建及自动化测试也成了不可缺少的技术栈。
 
 - [1. Continuous project building & Automatic Deployment-Jenkins+Docker](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/37)
