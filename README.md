@@ -5,8 +5,8 @@
 - 收藏请点Star，订阅请点Watch。👋👋👋
 - 如果大家在阅读的过程中发现有出错的地方，欢迎留言指正。
 
-## 1. JavaScript面试知识点总结
 
+## 1. JavaScript面试知识点总结
 ### 目录
 
 - [1. JS数据类型有哪些？如何进行类型判断？不同类型的内存图大致是怎样的？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/2)
@@ -24,8 +24,8 @@
 - [13. 讲一讲JavaScript设计模式中的单例模式](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/31)
 - [14. ES6的箭头函数中this有什么特点？](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/32)
 
-## 2. CSS
 
+## 2. CSS
 ### 目录
 
 - [1. 垂直居中的几种实现方案 ](https://github.com/JCHappytime/Front-End-Interview-Vue/issues/7)
